@@ -12,13 +12,22 @@ body {
     grid-template-rows: 190px 190px 190px 190px 190px 190px;
     gap: 3px;
     justify-content: center;
+    grid-template-areas: 
+        "h1  h1  h2  h3"
+        "h1  h1  h2  h4"
+        "h5  h7  h8  h9"
+        "h6  h7  h8  h9"
+        "h10 h10 h11 h13"
+        "h10 h10 h12 h13"    
+    ;
 }
 .container-item img {
     width: 100%;
     height: 100%;
     /* object-fit: cover; */
 }
-.container-item:first-child {
+                            /*  CSS BY GRID-COLUMN AND GRID-ROW */
+/* .container-item:first-child {
     grid-column: 1/3;
     grid-row: 1/3;
 }
@@ -70,4 +79,43 @@ body {
 .container-item:nth-child(13) {
     grid-column: 4/5;
     grid-row: 5/7;
+} */
+
+
+                            /*  CSS BY GRID-TEMPLATE-AREAS */
+
+                                /* 
+            "h1  h1  h2  h3"
+            "h1  h1  h2  h4"
+            "h5  h7  h8  h9"
+            "h6  h7  h8  h9"
+            "h10 h10 h11 h13"
+            "h10 h10 h12 h13"
+    
+    
+    */
+
+.container-item:first-child {
+    grid-area: h1;
+}
+.container-item:nth-child(2) {
+    grid-area: h2;
+}
+.container-item:nth-child(6) {
+    grid-area: h6;
+}
+.container-item:nth-child(7) {
+    grid-area: h7;
+}
+.container-item:nth-child(8) {
+    grid-area: h8;
+}
+.container-item:nth-child(11) {
+    grid-area: h9;
+}
+.container-item:nth-child(10) {
+    grid-area: h10;
+}
+.container-item:nth-child(13) {
+    grid-area: h13;
 }
