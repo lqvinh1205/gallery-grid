@@ -26,10 +26,20 @@
     grid-auto-columns: 80%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    /* scroll-snap-stop: always ; */
+    scroll-snap-stop: always ;
     }
     .image-item {
         scroll-snap-align: center;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .images::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .images {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
 }
 /* @media (max-width: 450px) {
